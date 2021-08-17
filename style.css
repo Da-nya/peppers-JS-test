@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    background-color: rgb(236, 235, 235);
+}
+h1{
+    text-align: center;
+}
+.main-window{
+    background-color: rgb(0, 76, 139);
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    position: relative;
+}
+.cars{
+    width: 150px;
+    height: 75px;
+    margin:0;
+    position: absolute;
+    visibility: hidden;
+}
+.red-info{
+    text-align: center;
+    color: rgba(255, 0, 0, 0.63);
+    font-size: 20px;
+}
+.orange-info{
+    text-align: center;
+    color: rgb(212, 138, 0);
+    font-size: 20px;
+}
+.score{
+    text-align: center;
+    font-size: 24px;
+}
+.info{
+    margin:auto;
+    width: fit-content;
+}
+.game-info{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+}
+button {
+    width: 130px;
+    height: 70px;
+    font-size: 25px;
+    display: inline-block;
+    margin-left: 40px;
+}
