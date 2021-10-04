@@ -18,6 +18,7 @@ export default function (props){
         position: 'absolute',
         transform: 'translate('+props.posX +'px,'+ props.posY+'px)'
     }
+    
     if (props.carRotate == 1 || props.carRotate == 3)
     {
         carStyle = {
@@ -27,5 +28,29 @@ export default function (props){
             transform: 'translate('+props.posX +'px,'+ props.posY+'px)'
         }
     }
-    return <img style={carStyle} src={matr[props.gameMode][props.carRotate]}/>;
+
+    var carStyle2 = {
+        width: '150px',
+        height: '75px',
+        position: 'absolute',
+        transform: 'translate('+props.posX +'px,'+ props.posY+'px)',
+        visibility: "hidden"
+    }
+    
+    if (props.nextRotate == 1 || props.nextRotate == 3)
+    {
+        carStyle2 = {
+            width: '75px',
+            height: '150px',
+            position: 'absolute',
+            transform: 'translate('+props.posX +'px,'+ props.posY+'px)',
+            visibility: "hidden"
+        }
+    }
+
+    return <div>
+            <img style={carStyle} src={matr[props.gameMode][props.carRotate]}/>
+            <img style ={carStyle2} src={matr[props.nextGameMode][props.nextRotate]}/>
+        </div>
+    ;
 }

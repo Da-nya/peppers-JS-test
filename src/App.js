@@ -25,6 +25,9 @@ class App extends React.Component{
       carTranslate:0,
       carRotate:0,
       gameMode:0,
+      nextTranslate: Math.floor(Math.random()*4),
+      nextRotate: Math.floor(Math.random()*4),
+      nextGameMode: Math.floor(Math.random()*2),
     }
 
     let my = this;
@@ -75,8 +78,13 @@ class App extends React.Component{
       //return<script src="./components/automobile.js"/>
       let state = this.state;
       return <Auto 
-      gameMode={state.gameMode} carRotate={state.carRotate}
-      carTranslate={state.carTranslate} posX={state.posX} posY={state.posY}
+      gameMode={state.gameMode} 
+      carRotate={state.carRotate}
+      carTranslate={state.carTranslate} 
+      posX={state.posX} posY={state.posY}
+      nextTranslate={state.nextTranslate} 
+      nextRotate={state.nextRotate}
+      nextGameMode={state.nextGameMode}
       >
       </Auto>
     }
@@ -97,13 +105,16 @@ class App extends React.Component{
 
   newMove()
   {
-    let gameMode = Math.floor(Math.random()*2);
-    let carTranslate = Math.floor(Math.random()*4);
-    let carRotate = Math.floor(Math.random()*4);
+    let gameMode = this.state.nextGameMode;
+    let carTranslate = this.state.nextTranslate;
+    let carRotate = this.state.nextRotate;
     this.setState({
       gameMode: gameMode,
       carTranslate: carTranslate,
       carRotate: carRotate,
+      nextTranslate: Math.floor(Math.random()*4),
+      nextRotate: Math.floor(Math.random()*4),
+      nextGameMode: Math.floor(Math.random()*2),
     });
   }
 
