@@ -1,8 +1,15 @@
 	Первоисточник игры
 https://wikium.ru/game/yellow-submarine
 
+	Установка реакт скриптов
+
+npm install react-scripts --save	
+
+
+
 	Запуск 
 
 npm start
 
-доступ по адресу localhost:3000
+
+доступно по адресу localhost:3000
